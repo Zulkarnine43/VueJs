@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+<h1>Hello world</h1>
+<div class="my-div">
+	
+{{message}}
+
+<h1>Votes : {{votes}}</h1>
+
+<button type="button" @click="votes++">+</button>
+<button type="button" @click="votes--">-</button>
+<button type="button" v-on:click="votes--">-</button>
+
+<h1>{{name}}</h1>
+<input type="text" v-model ="name"/>
+
+<p>{{firstname}}</p>
+<p>{{lastname}}</p>
+<table>
+	<tr>
+		<th>First name</th>
+		<td><input type="text" v-model="firstname"></td>
+	</tr>
+
+	<tr>
+		<th>last name</th>
+		<td><input type="text" v-model="lastname"></td>
+	</tr>
+	<tr>
+		<th>full name</th>
+		<td><input type="text" v-model="fullname"></td>
+	</tr>
+
+<tr>
+		<th></th>
+		<td><input type="submit" @click="makeFullName" value="submit" ></td>
+	</tr>
+
+</table>
+
+
+
+
+<table>
+	<tr>
+		<th>First number</th>
+		<td><input type="text" v-model="first"></td>
+	</tr>
+
+	<tr>
+		<th>last number</th>
+		<td><input type="text" v-model="last"></td>
+	</tr>
+	<tr>
+		<th>result</th>
+		<td><input type="text" v-model="result"></td>
+	</tr>
+
+<tr>
+		<th>First name</th>
+		<td><input type="submit" @click="sum" value="+" >
+           <input type="submit" @click="sub" value="-" >
+           <input type="submit" @click="mul" value="*" >
+           <input type="submit" @click="divi" value="/" >
+
+		</td>
+	</tr>
+
+</table>
+<ul>
+	<li v-for="a in course">
+		{{a.title}} by - {{a.instructor}}
+	</li>
+</ul>
+
+
+
+
+</div>
+
+
+
+<script src="vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
